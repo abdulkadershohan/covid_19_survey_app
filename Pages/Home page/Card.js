@@ -5,7 +5,7 @@ class Card extends Component {
     render() {
         return (
             <Container>
-                
+
 
                     <Content>
                         <Button>
