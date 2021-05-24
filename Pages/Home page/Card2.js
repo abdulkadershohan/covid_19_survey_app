@@ -1,39 +1,36 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-
+import imageHand from '../../images/HandWash.jpg'
 import {Image} from 'react-native'
-class CardHome extends Component {
+class Card2 extends Component {
     render() {
         return (
-            <Container  style={{
-                marginTop:20
+            <Container style={{
+                marginTop:-250
             }}>
-                {/*
-                <Header>
-                    <Text>HEllo</Text>
-                </Header>
-                */}
 
                 <Content>
-                    <Card style={{flex: 0}}>
+                    <Card>
                         <CardItem>
                             <Left>
-                                <Thumbnail source={require('../../images/HandWash.jpg')} />
+                                <Thumbnail source={require('../../images/survey.jpg')} />
                                 <Body>
-                                    <Text>HEALTH TRIPS</Text>
-                                    <Text note>April 15, 2020</Text>
+                                    <Text>DIAGNOSE YOUR CHANCES OF GETTING INFECTED</Text>
+                                    <Text note>April 28, 2020</Text>
                                 </Body>
                             </Left>
                         </CardItem>
                         <CardItem>
                             <Body>
-                                <Image source={require('../../images/HandWash.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
+                                <Image source={require('../../images/survey.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
                                 <Text style={{
                                     paddingTop:10,
+                                    textAlign:'justify',
+
 
                                 }}>
-                                    Protect yourself and others from covid-19. Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. Maintain at least 1 meter (3 feet) distance between yourself and others.
-                                </Text>
+                                    Are you infected? Here are some queries about the major symptoms of coronavirus. By answering the questions, you will be able to know about your health condition. During the pandemic situation this process is very safe.
+                                 </Text>
                             </Body>
                         </CardItem>
                         <CardItem>
@@ -56,4 +53,4 @@ class CardHome extends Component {
     }
 }
 
-export default CardHome;
+export default Card2;

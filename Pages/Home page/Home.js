@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {SafeAreaView, Linking, View, FlatList, StyleSheet, Text, StatusBar, ScrollView} from 'react-native';
-import Card from './Card';
+import CardHome from './Card';
+import Card2 from './Card2';
+import Card3 from './Card3';
 
 const DATA = [
     {
@@ -69,7 +71,9 @@ class Home extends Component {
                         keyExtractor={item => item.id}
                     />
 
-                    <Card/>
+                    <CardHome/>
+                    <Card2/>
+                    <Card3/>
                 </SafeAreaView>
 
 
