@@ -3,6 +3,8 @@ import {SafeAreaView, Linking, View, FlatList, StyleSheet, Text, StatusBar, Scro
 import CardHome from './Card';
 import Card2 from './Card2';
 import Card3 from './Card3';
+import { Container, Header, Thumbnail,    Left,   } from 'native-base';
+
 
 const DATA = [
     {
@@ -58,23 +60,38 @@ class Home extends Component {
             <Item title={item.title} no={item.no}/>
         );
         return (
-                <SafeAreaView style={styles.container}>
-                    <Text style={{
-                        color:'red',
-                        fontWeight:'bold',
-                        fontSize: 24,
-                        textAlign:'center'
-                    }}>HOT LINE NUMBERS</Text>
-                    <FlatList
-                        data={DATA}
-                        renderItem={renderItem}
-                        keyExtractor={item => item.id}
-                    />
+            <SafeAreaView >
 
-                    <CardHome/>
-                    <Card2/>
-                    <Card3/>
-                </SafeAreaView>
+                    <Header>
+                        <Left>
+                            <Thumbnail source={require('../../images/logo.png')} />
+                        </Left>
+                        <Text style={{
+                            textAlign:'center',
+                            textTransform:'uppercase',
+                            fontWeight:'bold',
+                            paddingTop:15,
+                            color:'white'
+                        }}> Covid-19 Survey app</Text>
+                    </Header>
+
+
+                <Text style={{
+                    color:'red',
+                    fontWeight:'bold',
+                    fontSize: 24,
+                    textAlign:'center'
+                }}>HOT LINE NUMBERS</Text>
+                <FlatList
+                    data={DATA}
+                    renderItem={renderItem}
+                    keyExtractor={item => item.id}
+                />
+
+                <CardHome/>
+                <Card2/>
+                <Card3/>
+            </SafeAreaView>
 
 
 
@@ -82,10 +99,7 @@ class Home extends Component {
     }
 }
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: StatusBar.currentHeight || 0,
-    },
+
     item: {
         backgroundColor: 'orange',
         borderRadius:15,

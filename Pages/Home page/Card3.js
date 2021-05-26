@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-import imageHand from '../../images/HandWash.jpg'
 import {Image} from 'react-native'
 class Card3 extends Component {
     render() {
