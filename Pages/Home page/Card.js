@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
 import {Image} from 'react-native'
-class CardHome extends Component {
+class Card1 extends Component {
     render() {
         return (
             <Container  style={{
@@ -56,4 +56,4 @@ class CardHome extends Component {
     }
 }
 
-export default CardHome;
+export default Card1;

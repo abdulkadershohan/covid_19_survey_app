@@ -34,7 +34,13 @@ export default class Trips extends Component {
     render() {
         return (
                 <View>
-                    <Header />
+                    <Header>
+                        <Text style={{
+                            color:'#FFFFFF',
+                            paddingTop:15,
+                            textTransform: 'uppercase'
+                        }}>COVID-19 Health Trips</Text>
+                    </Header>
                     <Content >
                         <Separator style={{
                             height:40
@@ -119,4 +125,3 @@ export default class Trips extends Component {
         );
     }
 }
-

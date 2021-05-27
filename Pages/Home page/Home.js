@@ -88,9 +88,7 @@ class Home extends Component {
                     keyExtractor={item => item.id}
                 />
 
-                <CardHome/>
-                <Card2/>
-                <Card3/>
+
             </SafeAreaView>
 
 
