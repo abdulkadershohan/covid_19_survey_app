@@ -1,139 +1,46 @@
-import React, {Component} from 'react';
-import {SafeAreaView, Linking, View, FlatList, StyleSheet, Text, StatusBar, ScrollView} from 'react-native';
-import CardHome from './Card';
+import React, {Component,useState} from 'react';
+import {View, Button, SafeAreaView, ScrollView, Text, Linking, StyleSheet} from 'react-native';
+import Hot_Line from './Hot_Line';
+import Card1 from './Card';
 import Card2 from './Card2';
 import Card3 from './Card3';
-import { Container, Header, Thumbnail,    Left,   } from 'native-base';
 
-
-const DATA = [
-    {
-        id: 'hotline-1',
-        title: 'National Call Center',
-        no:'333-1'
-    },
-    {
-        id: 'hotline-2',
-        title: 'Health Portal',
-        no:'16263'
-    },
-    {
-        id: 'hotline-3',
-        title: 'IEDCR',
-        no:'10655'
-    },
-    {
-        id: 'hotline-4',
-        title: 'COVID-19 Telehealth',
-        no:'09666777222'
-    },
-];
-
-const Item = ({ title,no }) => (
-    <View style={styles.item}>
-        <Text style={styles.title}>{title}</Text>
-        <View style={styles.box}>
-            <View>
-                <Text style={styles.number}>{no}</Text>
-            </View>
-            <View style={styles.btnCallNow}>
-                <Text
-
-                    onPress={()=>{Linking.openURL(`tel:${no}`);} }
-                    title="Call Now"
-                    color="#292b2c"
-                >Call Now
-                </Text>
-
-
-            </View>
-        </View>
-
-
-
-    </View>
-);
 class Home extends Component {
 
     render() {
-        const renderItem = ({ item,no }) => (
-            <Item title={item.title} no={item.no}/>
-        );
+
         return (
-            <SafeAreaView >
 
-                    <Header>
-                        <Left>
-                            <Thumbnail source={require('../../images/logo.png')} />
-                        </Left>
-                        <Text style={{
-                            textAlign:'center',
-                            textTransform:'uppercase',
-                            fontWeight:'bold',
-                            paddingTop:15,
-                            color:'white'
-                        }}> Covid-19 Survey app</Text>
-                    </Header>
-
-
-                <Text style={{
-                    color:'red',
-                    fontWeight:'bold',
-                    fontSize: 24,
-                    textAlign:'center'
-                }}>HOT LINE NUMBERS</Text>
-                <FlatList
-                    data={DATA}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.id}
-                />
-
-
-            </SafeAreaView>
-
+              <SafeAreaView>
+                  <ScrollView>
+                  <Hot_Line/>
+                  <Card1/>
+                  <Card2/>
+                  <Card3/>
+                  </ScrollView>
+              </SafeAreaView>
 
 
         );
     }
 }
-const styles = StyleSheet.create({
-
-    item: {
-        backgroundColor: 'orange',
-        borderRadius:15,
-        padding: 10,
-        marginVertical: 8,
-        marginHorizontal: 16,
-    },
-    number:{
-        textAlign:'center',
-        fontSize: 32,
-        color:'#17d1ac',
-        paddingLeft:50
-    },
-
-    title: {
-        fontSize: 32,
-        color:'black',
-        fontWeight:'bold',
-        textAlign:'center',
-
-    },
-    btnCallNow:{
-        width: "auto",
-        margin: 10,
-        backgroundColor: 'white',
-        padding: 5,
-        borderRadius: 360,
-        marginRight:20,
-
-    },
-    box:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-
-    }
-
-});
 
 export default Home;
+
+const styles=StyleSheet.create({
+    MyTextPrimary:{
+        color:'#FFFFFF',
+        textTransform: 'uppercase',
+        fontWeight:'bold',
+
+
+    },
+    MyTextSecondary:{
+        color:'#161616',
+        textTransform: 'uppercase',
+        fontWeight:'bold',
+
+
+    },
+
+})

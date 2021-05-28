@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Text, Separator } from 'native-base';
-import {View,StyleSheet} from 'react-native'
+import {View, StyleSheet, Button,TouchableOpacity} from 'react-native';
 import styles from '../.././Style/MyStyle'
+
 export default class Trips extends Component {
    state={
         trips_1:{
@@ -34,6 +35,9 @@ export default class Trips extends Component {
     render() {
         return (
                 <View>
+                    <TouchableOpacity style = {{ margin: 128 }} onPress = {goToAbout}>
+                        <Text>This is HOME!</Text>
+                    </TouchableOpacity>
                     <Header>
                         <Text style={{
                             color:'#FFFFFF',
@@ -121,6 +125,7 @@ export default class Trips extends Component {
 
 
                     </Content>
+
                 </View>
         );
     }
