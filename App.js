@@ -1,9 +1,11 @@
 import React  from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './Pages/Home page/Home';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-import MyStyle from './Style/MyStyle';
+import Home from './Screens/HomeScreen/Home';
+import Card1 from './Screens/HomeScreen/Card';
+import Trips from './Screens/Helth-Trips/Trips';
+import Survey from './Screens/Survey/Survey';
+import Stats from './Screens/Live Stats/Stats';
 
 
 const Stack = createStackNavigator();
@@ -25,16 +27,13 @@ function App() {
                             fontWeight: 'bold',
                         },
                         headerTitleAlign:'center',
-                        headerShown:false
+                        headerShown:true
 
                     }}
                 />
-                {/*
-                 <Stack.Screen
-
-                    name="trips" component={Home} options={{ title: 'COVID-19 SURVEY APP'}}
-                />
-                */}
+                <Stack.Screen name="Trips" component={Trips} />
+                <Stack.Screen name="Survey" component={Survey} />
+                <Stack.Screen name="Stats" component={Stats} />
 
 
 

@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 import {Image} from 'react-native'
 class Card3 extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <Container style={{
-                marginTop:-250
+                marginTop:-293
             }}>
-
                 <Content>
                     <Card>
                         <CardItem>
@@ -39,7 +41,7 @@ class Card3 extends Component {
                                     <Icon name="logo-github" />
                                     <Text>1,926 stars</Text>
                                     */}
-                                    <Text>
+                                    <Text onPress={() => this.props.name.navigation.navigate("Stats")}>
                                         Learn More
                                     </Text>
                                 </Button>

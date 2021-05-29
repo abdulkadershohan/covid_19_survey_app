@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-import imageHand from '../../images/HandWash.jpg'
 import {Image} from 'react-native'
 class Card2 extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <Container style={{
-                marginTop:-250
+                marginTop:-300
             }}>
 
                 <Content>
@@ -40,7 +42,7 @@ class Card2 extends Component {
                                     <Icon name="logo-github" />
                                     <Text>1,926 stars</Text>
                                     */}
-                                    <Text>
+                                    <Text  onPress={() => this.props.name.navigation.navigate("Survey")}>
                                         Learn More
                                     </Text>
                                 </Button>
