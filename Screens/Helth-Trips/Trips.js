@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, List, ListItem, Text, Separator } from 'native-base';
-import {View, StyleSheet, Button,TouchableOpacity} from 'react-native';
+import { Body,Title, Header, Content,  ListItem, Text } from 'native-base';
+import {View} from 'react-native';
 import styles from '../.././Style/MyStyle'
 import {SafeAreaView, ScrollView} from 'react-native';
 
@@ -38,26 +38,27 @@ export default class Trips extends Component {
             <SafeAreaView>
                 <ScrollView>
                     <View>
-                        <Header>
-                            <Text style={{
-                                color:'#FFFFFF',
-                                paddingTop:15,
-                                textTransform: 'uppercase'
-                            }}>COVID-19 Health Trips</Text>
-                        </Header>
                         <Content >
-                            <Separator style={{
-                                height:40
-                            }} bordered>
-                                <Text
-                                    style={{
-                                        color:'#6200EE',
-                                        fontWeight:'bold',
-                                        textAlign:'left',
+                            <Header style={{
+                                backgroundColor:'#FFFFFF'
+                            }
+                            }>
+                                <Body>
+                                    <Title>
 
-                                    }}
-                                >{this.state.trips_1.title}</Text>
-                            </Separator>
+                                        <Text
+                                            style={{
+                                                color:'#161616',
+                                                fontWeight:'bold',
+                                                textAlign:'center',
+
+                                            }}
+                                        >{this.state.trips_1.title} </Text>
+                                    </Title>
+
+                                </Body>
+                            </Header>
+
 
                             <ListItem style={styles.colorPrimary} last>
                                 <Text style={styles.TextPrimary}>{this.state.trips_1['1']}</Text>
@@ -88,17 +89,22 @@ export default class Trips extends Component {
                             </ListItem>
 
 
+                            <Body style={{
+                                height:50,
+                            }}>
+                                <Title style={{paddingTop:15}}>
 
-                            <Separator  style={{
-                                height:40
-                            }}  bordered>
-                                <Text style={{
-                                    color:'#6200EE',
-                                    fontWeight:'bold',
-                                    textAlign:'left',
+                                    <Text
+                                        style={{
+                                            color:'#161616',
+                                            fontWeight:'bold',
 
-                                }}>{this.state.trips_2.title}</Text>
-                            </Separator>
+
+                                        }}
+                                    >{this.state.trips_2.title} </Text>
+                                </Title>
+
+                            </Body>
 
                             <ListItem style={styles.colorSecondary} last>
                                 <Text style={styles.TextSecondary}>{this.state.trips_2['1']}</Text>

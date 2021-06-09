@@ -38,7 +38,7 @@ class Card1 extends Component {
                                     <Left>
                                         <Button transparent textStyle={{color: '#87838B'}}>
 
-                                            <Text  onPress={() => this.props.name.navigation.navigate("Trips")}>
+                                            <Text  onPress={() => this.props.name.navigation.navigate("COVID-19 HEALTH TRIPS")}>
                                                 Learn More
                                             </Text>
                                         </Button>

@@ -78,8 +78,8 @@ export default class Hot_Line extends Component {
                                 <Thumbnail source={require( '../.././images/icon/iedcr.jpg' )} />
                             </Left>
                             <Body>
-                                <Text>IEDCR</Text>
-                                <Text note>10655</Text>
+                                <Text style={styles.MyTextSecondary}>IEDCR</Text>
+                                <Text note style={styles.MyTextSecondary}>10655</Text>
                             </Body>
                             <Right>
                                 <Icon

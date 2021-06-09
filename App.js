@@ -6,12 +6,15 @@ import Card1 from './Screens/HomeScreen/Card';
 import Trips from './Screens/Helth-Trips/Trips';
 import Survey from './Screens/Survey/Survey';
 import Stats from './Screens/Live Stats/Stats';
+import {SafeAreaView,ScrollView,Text} from 'react-native';
+import Content from './Screens/Survey/Survey Content/Content';
+
 
 
 const Stack = createStackNavigator();
 
 function App() {
-    return (
+    {/*
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
@@ -27,12 +30,40 @@ function App() {
                             fontWeight: 'bold',
                         },
                         headerTitleAlign:'center',
-                        headerShown:true
+                        headerShown:false
 
                     }}
                 />
-                <Stack.Screen name="Trips" component={Trips} />
-                <Stack.Screen name="Survey" component={Survey} />
+                <Stack.Screen name="COVID-19 HEALTH TRIPS" component={Trips}
+                              options={{
+                                  title: 'COVID-19 HEALTH TRIPS',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+                                  headerShown:true
+
+                              }}
+                />
+                <Stack.Screen name="Survey" component={Survey}
+                              options={{
+                                  title: 'COVID-19 SURVEY',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:true
+
+                              }}
+
+                />
                 <Stack.Screen name="Stats" component={Stats} />
 
 
@@ -40,6 +71,16 @@ function App() {
 
             </Stack.Navigator>
         </NavigationContainer>
+        */}
+    return (
+        <SafeAreaView>
+            <ScrollView>
+                <Content/>
+
+            </ScrollView>
+        </SafeAreaView>
+
+
     );
 }
 

@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import {SafeAreaView, ScrollView,Text} from 'react-native';
-
-class Survey extends Component {
+import {SafeAreaView, ScrollView} from 'react-native';
+import {Container, Header, Content, Card, CardItem, Text, Body, Button, Icon} from 'native-base';
+import SurveyHomeTop from './Survey Home/HomeTop';
+import SurveyHomeBottom from './Survey Home/HomeBottom';
+import SurveyContent from './Survey Content/Content';
+class SurveyHome extends Component {
     render() {
         return (
             <SafeAreaView>
                 <ScrollView>
-                    <Text>I'm Survey</Text>
+                  <SurveyHomeTop />
+                  <SurveyHomeBottom/>
                 </ScrollView>
             </SafeAreaView>
         );
@@ -14,4 +18,4 @@ class Survey extends Component {
 }
 
 
-export default Survey;
+export default SurveyHome;
