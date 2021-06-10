@@ -6,10 +6,9 @@ export default StyleSheet.create({
         fontSize: 25,
     },
     options1:{
-        padding: 10,
         width:"80%",
         marginTop:10,
-        backgroundColor:'#FFD003',
+        backgroundColor:'red',
         borderRadius:10,
     },
     options2:{
@@ -22,6 +21,13 @@ export default StyleSheet.create({
         color:'#FFFFFF',
         fontWeight:'bold',
 
+
+    },
+    ButtonOption:{
+        marginLeft:15,
+        color:'#161616',
+        fontWeight:'bold',
+        width:"100%",
 
 
     }
