@@ -29,7 +29,14 @@ export default StyleSheet.create({
         fontWeight:'bold',
         width:"100%",
 
-
+    },
+    correct:{
+        backgroundColor: "#1db900",
+        color: "#fff"
+    },
+    incorrect:{
+        backgroundColor: "#1db900",
+        color: "#fff"
     }
 
 

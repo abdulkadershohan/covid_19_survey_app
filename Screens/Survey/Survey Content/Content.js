@@ -4,6 +4,7 @@ import Answer from '../Answer/Answer';
 import Question from '../Questions/Question';
 import {Button} from 'native-base';
 import SurveyStyle from '../Style/SurveyStyle';
+import InputForm from '../../Form/InputForm';
 
 
 export default class Quiz extends Component {
@@ -153,7 +154,7 @@ export default class Quiz extends Component {
             },
             correctAnswer: 0,
             clickedAnswer: 0,
-            step: 1,
+            step: 20,
             score: 0,
             buttonName: 'Next'
         }
@@ -231,8 +232,14 @@ export default class Quiz extends Component {
                                 onPress={() => this.nextStep(step)}><Text style={SurveyStyle.Button}>{this.state.buttonName}</Text></Button>
                         </>) : (
                             <View >
-                                <Text>You have completed the Survey!</Text>
-
+                                <Text style={{
+                                    color:'green',
+                                    textAlign:'center',
+                                    fontSize:20,
+                                    fontWeight:'bold',
+                                    paddingTop:10
+                                }}>You have completed the Survey!</Text>
+                                <InputForm/>
                             </View>
 
 
