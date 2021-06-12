@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Body,Title, Header, Content,  ListItem, Text } from 'native-base';
+import {Container, Body,Title, Header, Content,  ListItem, Text } from 'native-base';
 import {View} from 'react-native';
 import styles from '../.././Style/MyStyle'
 import {SafeAreaView, ScrollView} from 'react-native';
+import Footer1 from '../../Component/Footer';
 
 export default class Trips extends Component {
    state={
@@ -35,106 +36,103 @@ export default class Trips extends Component {
     }
     render() {
         return (
-            <SafeAreaView>
-                <ScrollView>
-                    <View>
-                        <Content >
-                            <Header style={{
-                                backgroundColor:'#FFFFFF'
-                            }
-                            }>
-                                <Body>
-                                    <Title>
+            <Container>
+                <Content >
+                                <Header style={{
+                                    backgroundColor:'#FFFFFF'
+                                }
+                                }>
+                                    <Body>
+                                        <Title>
+
+                                            <Text
+                                                style={{
+                                                    color:'#161616',
+                                                    fontWeight:'bold',
+                                                    textAlign:'center',
+
+                                                }}
+                                            >{this.state.trips_1.title} </Text>
+                                        </Title>
+
+                                    </Body>
+                                </Header>
+
+
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_1['1']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_1['2']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_1['3']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_1['4']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_1['5']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_1['6']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_1['7']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_1['8']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_1['9']}</Text>
+                                </ListItem>
+
+
+                                <Body style={{
+                                    height:50,
+                                }}>
+                                    <Title style={{paddingTop:15}}>
 
                                         <Text
                                             style={{
                                                 color:'#161616',
                                                 fontWeight:'bold',
-                                                textAlign:'center',
+
 
                                             }}
-                                        >{this.state.trips_1.title} </Text>
+                                        >{this.state.trips_2.title} </Text>
                                     </Title>
 
                                 </Body>
-                            </Header>
 
-
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_1['1']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_1['2']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_1['3']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_1['4']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_1['5']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_1['6']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_1['7']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_1['8']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_1['9']}</Text>
-                            </ListItem>
-
-
-                            <Body style={{
-                                height:50,
-                            }}>
-                                <Title style={{paddingTop:15}}>
-
-                                    <Text
-                                        style={{
-                                            color:'#161616',
-                                            fontWeight:'bold',
-
-
-                                        }}
-                                    >{this.state.trips_2.title} </Text>
-                                </Title>
-
-                            </Body>
-
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_2['1']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_2['2']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_2['3']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_2['4']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_2['5']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorPrimary} last>
-                                <Text style={styles.TextPrimary}>{this.state.trips_2['6']}</Text>
-                            </ListItem>
-                            <ListItem style={styles.colorSecondary} last>
-                                <Text style={styles.TextSecondary}>{this.state.trips_2['7']}</Text>
-                            </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_2['1']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_2['2']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_2['3']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_2['4']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_2['5']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorPrimary} last>
+                                    <Text style={styles.TextPrimary}>{this.state.trips_2['6']}</Text>
+                                </ListItem>
+                                <ListItem style={styles.colorSecondary} last>
+                                    <Text style={styles.TextSecondary}>{this.state.trips_2['7']}</Text>
+                                </ListItem>
 
 
 
-                        </Content>
+                            </Content>
+                <Footer1 name={this.props}/>
+            </Container>
 
-                    </View>
-                </ScrollView>
-            </SafeAreaView>
 
         );
     }

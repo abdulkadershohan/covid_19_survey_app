@@ -4,18 +4,21 @@ import {Container, Header, Content, Card, CardItem, Text, Body, Button, Icon} fr
 import SurveyHomeTop from './Survey Home/HomeTop';
 import SurveyHomeBottom from './Survey Home/HomeBottom';
 import SurveyContent from './Survey Content/Content';
+import Footer1 from '../../Component/Footer';
 class SurveyHome extends Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-            <SafeAreaView>
-                <ScrollView>
-                  <SurveyHomeTop name={this.props}/>
-                  <SurveyHomeBottom/>
-                </ScrollView>
-            </SafeAreaView>
+            <Container>
+                <Content>
+                    <SurveyHomeTop name={this.props}/>
+                    <SurveyHomeBottom/>
+                </Content>
+                <Footer1 name={this.props}/>
+            </Container>
+
         );
     }
 }

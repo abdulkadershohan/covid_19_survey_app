@@ -3,9 +3,6 @@ import {SafeAreaView, ScrollView,View,StyleSheet} from 'react-native';
 import {
     Container,
     Header,
-    Image,
-    Form,
-    Input,
     Content,
     Card,
     CardItem,
@@ -19,10 +16,11 @@ import {
     Label, Item,
 } from 'native-base';
 import axios from 'axios';
+import Footer1 from '../../Component/Footer';
 
 
 
-function Stats() {
+function Stats(props) {
         const [latest,setLatest]=useState("");
         const [results,setResult]=useState([])
         const [searchCountry,setSearchCountry]=useState("")
@@ -44,12 +42,9 @@ function Stats() {
     },[]);
     const date=new Date(parseInt(latest.updated));
     const lastUpdated =date.toString();
-
     const filterCountry=results.filter(item=>{
         return searchCountry !==""?item.country.includes(searchCountry):item;
     })
-
-    ///
     const countries=filterCountry.map((data, i)=>{
 
         return (
@@ -108,55 +103,51 @@ function Stats() {
 
     });
         return (
-            <SafeAreaView>
-                <ScrollView>
-                    <Text style={styles.Title}>World Live Stats</Text>
-                    <View style={styles.container}>
-                        <View style={styles.active}>
-                            <Text style={styles.text}>
-                                Cases
-                            </Text>
-                            <Text style={styles.score}>{latest.cases}</Text>
+                <Container>
+                    <Content style={{backgroundColor:"#FFFFFF"}}>
+                            <Text style={styles.Title}>World Live Stats</Text>
+                        <View style={styles.container}>
+                            <View style={styles.active}>
+                                <Text style={styles.text}>
+                                    Cases
+                                </Text>
+                                <Text style={styles.score}>{latest.cases}</Text>
+
+
+                            </View>
+                            <View style={styles.Deaths}>
+                                <Text style={styles.text}>
+                                    Deaths
+                                </Text>
+                                <Text style={styles.score}>{latest.deaths}</Text>
+
+                            </View>
+                            <View style={styles.Recovered}>
+                                <Text style={styles.text}>
+                                    Recovered
+                                </Text>
+                                <Text style={styles.score}>{latest.recovered}</Text>
+
+                            </View>
 
 
                         </View>
-                        <View style={styles.Deaths}>
-                            <Text style={styles.text}>
-                                Deaths
-                            </Text>
-                            <Text style={styles.score}>{latest.deaths}</Text>
+                        <Text style={{
+                            textAlign:'center',
+                            color:'green'
+                        }}>Last Updated : {lastUpdated}</Text>
 
+                        {/*
+                         <View>
+                            {countries}
                         </View>
-                        <View style={styles.Recovered}>
-                            <Text style={styles.text}>
-                                Recovered
-                            </Text>
-                            <Text style={styles.score}>{latest.recovered}</Text>
-
-                        </View>
+                        */}
 
 
-                    </View>
-                    <Text style={{
-                        textAlign:'center',
-                        color:'green'
-                    }}>Last Updated : {lastUpdated}</Text>
+                    </Content>
+                    <Footer1 name={props}/>
+                </Container>
 
-                    <Form>
-                        <Item inlineLabel >
-                            <Label>Search a country</Label>
-                            <Input keyboardType="text" key="Name"
-                                   onChange={e=>setSearchCountry(e.target.value)}
-                            />
-                        </Item>
-                    </Form>
-
-                    <View>
-                        {countries}
-                    </View>
-
-                </ScrollView>
-            </SafeAreaView>
         );
     }
 
@@ -170,6 +161,7 @@ const styles=StyleSheet.create({
         flex: 9,
         display:'flex',
         flexDirection:'row',
+
     },
 
     Title:{

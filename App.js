@@ -14,7 +14,10 @@ import Quiz from './Screens/Survey/Survey Content/Content';
 
 const Stack = createStackNavigator();
 
-{/*
+function App() {
+
+    return (
+
   <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
@@ -100,11 +103,7 @@ const Stack = createStackNavigator();
 
             </Stack.Navigator>
         </NavigationContainer>
-*/}
-function App() {
 
-    return (
-        <Stats/>
 
 
     );

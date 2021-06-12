@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {SafeAreaView, ScrollView,View,Text,StyleSheet} from 'react-native';
+import { Container, Header, Content, FooterTab, Button, Icon, Badge } from 'native-base';
+
 import Answer from '../Answer/Answer';
 import Question from '../Questions/Question';
-import {Button, Content} from 'native-base';
 import SurveyStyle from '../Style/SurveyStyle';
 import InputForm from '../../Form/InputForm';
+import Footer1 from '../../../Component/Footer';
 
 
 export default class Quiz extends Component {
@@ -154,7 +156,7 @@ export default class Quiz extends Component {
             },
             correctAnswer: 0,
             clickedAnswer: 0,
-            step: 20,
+            step: 1,
             score: 0,
             buttonName: 'Next'
         }
@@ -206,8 +208,8 @@ export default class Quiz extends Component {
     render(){
         let { quiestions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
           return(
-            <SafeAreaView>
-                <ScrollView>
+            <Container>
+                <Content>
                     {step <= Object.keys(quiestions).length ?
                         (<>
                             <Question
@@ -245,9 +247,10 @@ export default class Quiz extends Component {
 
                         )
                     }
-                </ScrollView>
+                </Content>
+                <Footer1 name={this.props}/>
 
-            </SafeAreaView>
+            </Container>
         );
     }
 }
