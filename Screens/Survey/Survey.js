@@ -5,11 +5,14 @@ import SurveyHomeTop from './Survey Home/HomeTop';
 import SurveyHomeBottom from './Survey Home/HomeBottom';
 import SurveyContent from './Survey Content/Content';
 class SurveyHome extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <SafeAreaView>
                 <ScrollView>
-                  <SurveyHomeTop />
+                  <SurveyHomeTop name={this.props}/>
                   <SurveyHomeBottom/>
                 </ScrollView>
             </SafeAreaView>

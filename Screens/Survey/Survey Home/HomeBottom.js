@@ -6,18 +6,18 @@ class SurveyHomeBottom extends Component {
         return (
             <SafeAreaView>
                 <ScrollView>
-                    <Text style={styels.Title}>Total Test Result</Text>
-                    <View style={styels.container}>
-                        <View style={styels.redZone}>
-                            <Text style={styels.score}>0</Text>
+                    <Text style={styles.Title}>Total Test Result</Text>
+                    <View style={styles.container}>
+                        <View style={styles.redZone}>
+                            <Text style={styles.score}>0</Text>
 
                         </View>
-                        <View style={styels.yellowZone}>
-                            <Text style={styels.score}>0</Text>
+                        <View style={styles.yellowZone}>
+                            <Text style={styles.score}>0</Text>
 
                         </View>
-                        <View style={styels.greenZone}>
-                            <Text style={styels.score}>0</Text>
+                        <View style={styles.greenZone}>
+                            <Text style={styles.score}>0</Text>
 
                         </View>
 
@@ -34,7 +34,7 @@ class SurveyHomeBottom extends Component {
 
 
 export default SurveyHomeBottom;
-const styels=StyleSheet.create({
+const styles=StyleSheet.create({
     container:{
         height: 200,
         width: null,

@@ -8,14 +8,14 @@ import Survey from './Screens/Survey/Survey';
 import Stats from './Screens/Live Stats/Stats';
 import {SafeAreaView,ScrollView,Text} from 'react-native';
 import Content from './Screens/Survey/Survey Content/Content';
+import Quiz from './Screens/Survey/Survey Content/Content';
 
 
 
 const Stack = createStackNavigator();
 
-function App() {
-    {/*
-        <NavigationContainer>
+{/*
+  <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
                     name="Home"
@@ -36,7 +36,7 @@ function App() {
                 />
                 <Stack.Screen name="COVID-19 HEALTH TRIPS" component={Trips}
                               options={{
-                                  title: 'COVID-19 HEALTH TRIPS',
+                                  title: 'HOME',
                                   headerStyle: {
                                       backgroundColor:'#6200EE',
                                   },
@@ -50,7 +50,7 @@ function App() {
                 />
                 <Stack.Screen name="Survey" component={Survey}
                               options={{
-                                  title: 'COVID-19 SURVEY',
+                                  title: 'HOME',
                                   headerStyle: {
                                       backgroundColor:'#6200EE',
                                   },
@@ -64,21 +64,47 @@ function App() {
                               }}
 
                 />
-                <Stack.Screen name="Stats" component={Stats} />
+                <Stack.Screen name="Quiz" component={Quiz}
+                              options={{
+                                  title: 'COVID-19 SURVEY',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:true
+
+                              }}/>
+                <Stack.Screen name="Stats" component={Stats}
+                              options={{
+                                  title: 'HOME',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:true
+
+                              }}/>
+
+
 
 
 
 
             </Stack.Navigator>
         </NavigationContainer>
-        */}
-    return (
-        <SafeAreaView>
-            <ScrollView>
-                <Content/>
+*/}
+function App() {
 
-            </ScrollView>
-        </SafeAreaView>
+    return (
+        <Stats/>
 
 
     );

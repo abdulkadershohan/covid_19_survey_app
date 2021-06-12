@@ -35,7 +35,7 @@ class SurveyHomeTop extends Component {
                                 </CardItem>
                                 <CardItem footer bordered>
                                     <Button bordered  success iconRight
-                                    ><Text> Get Started </Text><Icon name='arrow-forward' /></Button>
+                                    ><Text onPress={() => this.props.name.navigation.navigate("Quiz")}> Get Started </Text><Icon name='arrow-forward' /></Button>
                                 </CardItem>
                             </Card>
                         </Content>

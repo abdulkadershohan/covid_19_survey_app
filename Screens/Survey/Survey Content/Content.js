@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {SafeAreaView, ScrollView,View,Text,StyleSheet} from 'react-native';
 import Answer from '../Answer/Answer';
 import Question from '../Questions/Question';
-import {Button} from 'native-base';
+import {Button, Content} from 'native-base';
 import SurveyStyle from '../Style/SurveyStyle';
 import InputForm from '../../Form/InputForm';
 
