@@ -9,16 +9,12 @@ import Stats from './Screens/Live Stats/Stats';
 import {SafeAreaView,ScrollView,Text} from 'react-native';
 import Content from './Screens/Survey/Survey Content/Content';
 import Quiz from './Screens/Survey/Survey Content/Content';
-
-
-
+import InputForm from './Screens/Form/InputForm';
 const Stack = createStackNavigator();
 
 function App() {
-
-    return (
-
-  <NavigationContainer>
+    {/*
+     <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen
                     name="Home"
@@ -103,10 +99,9 @@ function App() {
 
             </Stack.Navigator>
         </NavigationContainer>
-
-
-
+    */}
+    return (
+        <InputForm/>
     );
 }
-
 export default App;
