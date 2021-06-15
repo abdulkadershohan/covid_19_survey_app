@@ -241,7 +241,7 @@ export default class Quiz extends Component {
                                     fontWeight:'bold',
                                     paddingTop:10
                                 }}>You have completed the Survey!</Text>
-                                <InputForm/>
+                                <InputForm sendScore={this.state.score} name={this.props}/>
                             </View>
 
 

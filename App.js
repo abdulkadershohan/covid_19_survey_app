@@ -10,15 +10,16 @@ import {SafeAreaView,ScrollView,Text} from 'react-native';
 import Content from './Screens/Survey/Survey Content/Content';
 import Quiz from './Screens/Survey/Survey Content/Content';
 import InputForm from './Screens/Form/InputForm';
+import Danger from './Screens/Survey/Result Screen/Danger';
 const Stack = createStackNavigator();
 
 function App() {
-    {/*
+
+    return (
+
      <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen
-                    name="Home"
-                    component={Home}
+                <Stack.Screen name="Home" component={Home}
                     options={{
                         title: 'COVID-19 SURVEY APP',
                         headerStyle: {
@@ -61,7 +62,6 @@ function App() {
                                   headerShown:true
 
                               }}
-
                 />
                 <Stack.Screen name="Quiz" component={Quiz}
                               options={{
@@ -92,6 +92,21 @@ function App() {
 
                               }}/>
 
+                <Stack.Screen name="Danger" component={Danger}
+                              options={{
+                                  title: 'Danger',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:true
+
+                              }}/>
+
 
 
 
@@ -99,9 +114,9 @@ function App() {
 
             </Stack.Navigator>
         </NavigationContainer>
-    */}
-    return (
-        <InputForm/>
+
+
+
     );
 }
 export default App;

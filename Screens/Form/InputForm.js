@@ -1,28 +1,83 @@
 import React, {Component} from 'react';
 import {SafeAreaView,ScrollView,Text,TextInput,Picker,TouchableOpacity } from 'react-native';
 import { Container, Header,Button, Content, Form, Item, Input, Label } from 'native-base';
-
+import axios from 'axios'
 class InputForm extends Component {
-    state={
-        name:'',
-        phone:'',
-        region:'Dhaka',
-        city:'',
-        area:'',
-        address:'',
-    }
-    ButtononPressHandel=()=>{
-        alert(this.state.name)
-
-
-        this.setState({
+    constructor(props) {
+        super(props);
+        this. state={
             name:'',
             phone:'',
             region:'Dhaka',
             city:'',
             area:'',
-            address:''
-        })
+            address:'',
+            score:this.props.sendScore
+
+        }
+    }
+    ButtononPressHandel=()=> {
+        let error = false;
+
+        if (!this.state.name.trim()) {
+            alert("Name can't be empty");
+            error = true;
+            return;
+        }
+        else if (!this.state.phone.trim()) {
+            alert("Phone can't be empty");
+            error = true;
+            return;
+        }
+        else if (this.state.phone.length != 11) {
+            alert('Please type Valid phone number')
+            error = true;
+        }
+        else if (!this.state.city.trim()) {
+            alert("city can't be empty");
+            return;
+            error = true;
+        }
+        else if (!this.state.area.trim()) {
+            alert("Area can't be empty");
+            error = true;
+            return;
+        }
+        if (error != true) {
+            const obj={
+                name:this.state.name,
+                phone:this.state.phone,
+                region:this.state.region,
+                city:this.state.city,
+                area:this.state.area,
+                address:this.state.address,
+                score:this.state.score
+            }
+
+            axios.post("http://192.168.0.100/COVIT-19-SURVEY-APP/insert.php",obj)
+                /* .then(res=>console.log(res.data))
+                 */
+                .then(response=>{
+                    console.log(response)
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+
+            this.setState({
+                name:'',
+                phone:'',
+                region:'Dhaka',
+                city:'',
+                area:'',
+                address:'',
+                score:''
+
+            })
+        }
+
+
+
     }
 
     render() {
@@ -45,16 +100,18 @@ class InputForm extends Component {
                                 <Input keyboardType="text"
                                        key="Name"
                                        value={this.state.name}
-                                       onChange={(text)=>this.setState({name:text})}
-
+                                       onChangeText={(text)=>this.setState({name:text})}
                                 />
                             </Item>
+
+
                             <Item inlineLabel  >
                                 <Label>Phone</Label>
                                 <Input keyboardType="numeric"
                                        key="Phone"
+                                       maxLength={11}
                                        value={this.state.phone}
-                                       onChange={(text)=>this.setState({phone:text})}
+                                       onChangeText={(text)=>this.setState({phone:text})}
                                 />
                             </Item>
                             <Item inlineLabel>
@@ -82,7 +139,7 @@ class InputForm extends Component {
                                 <Input keyboardType="text"
                                        key="City"
                                        value={this.state.city}
-                                       onChange={(text)=>this.setState({city:text})}
+                                       onChangeText={(text)=>this.setState({city:text})}
 
                                 />
                             </Item>
@@ -91,7 +148,7 @@ class InputForm extends Component {
                                 <Input keyboardType="text"
                                        key="Area"
                                        value={this.state.area}
-                                       onChange={(text)=>this.setState({area:text})}
+                                       onChangeText={(text)=>this.setState({area:text})}
                                 />
                             </Item>
                             <Item inlineLabel >
@@ -99,7 +156,7 @@ class InputForm extends Component {
                                 <Input keyboardType="text"
                                        key="Address"
                                        value={this.state.address}
-                                       onChange={(text)=>this.setState({address:text})}
+                                       onChangeText={(text)=>this.setState({address:text})}
                                 />
                             </Item>
                             <TouchableOpacity style={{

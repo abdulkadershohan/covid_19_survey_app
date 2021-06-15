@@ -1,5 +1,6 @@
 {
   "name": "reactnative",
+  "proxy": "http://localhost/COVIT-19-SURVEY-APP/",
   "version": "0.0.1",
   "private": true,
   "scripts": {

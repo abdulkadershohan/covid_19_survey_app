@@ -1,7 +1,55 @@
 import React, {Component} from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
 import {View,StyleSheet,Text} from 'react-native';
+import axios from "axios";
 class SurveyHomeBottom extends Component {
+    state = {
+        users: "",
+        danger: "",
+        yellow: "",
+        green: "",
+    };
+
+    componentDidMount() {
+        axios
+            .get("http://192.168.0.100/COVIT-19-SURVEY-APP/select.php")
+            .then((res) => {
+                this.setState({ users: res.data });
+
+            })
+            .catch(function (error) {
+                console.log(error);
+
+            });
+
+    }
+    countDanger() {
+        let countDanger=0;
+        this.state.users
+            .filter((score) => score.score === 2)
+            .map(function (score, i) {
+                countDanger += 1;
+            });
+        return countDanger;
+    }
+    countYellow() {
+        let countYellow = 0;
+        this.state.users
+            .filter((score) => score.score === 2)
+            .map(function (score, i) {
+                countYellow += 1;
+            });
+        return countYellow;
+    }
+    countGreen() {
+        let countGreen = 0;
+        this.state.users
+            .filter((score) => score.score <= 1)
+            .map(function (score, i) {
+                countGreen += 1;
+            });
+        return countGreen;
+    }
     render() {
         return (
             <SafeAreaView>
@@ -9,15 +57,15 @@ class SurveyHomeBottom extends Component {
                     <Text style={styles.Title}>Total Test Result</Text>
                     <View style={styles.container}>
                         <View style={styles.redZone}>
-                            <Text style={styles.score}>0</Text>
+                            <Text style={styles.score}></Text>
 
                         </View>
                         <View style={styles.yellowZone}>
-                            <Text style={styles.score}>0</Text>
+                            <Text style={styles.score}></Text>
 
                         </View>
                         <View style={styles.greenZone}>
-                            <Text style={styles.score}>0</Text>
+                            <Text style={styles.score}></Text>
 
                         </View>
 
