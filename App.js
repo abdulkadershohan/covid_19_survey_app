@@ -12,6 +12,7 @@ import Quiz from './Screens/Survey/Survey Content/Content';
 import InputForm from './Screens/Form/InputForm';
 import Danger from './Screens/Survey/Result Screen/Danger';
 import Green from "./Screens/Survey/Result Screen/Green";
+import Yellow from "./Screens/Survey/Result Screen/yellow";
 const Stack = createStackNavigator();
 
 function App() {
@@ -105,7 +106,7 @@ function App() {
                                       fontWeight: 'bold',
                                   },
 
-                                  headerShown:true
+                                  headerShown:false
 
                               }}/>
                 <Stack.Screen name="Green" component={Green}
@@ -119,7 +120,21 @@ function App() {
                                       fontWeight: 'bold',
                                   },
 
-                                  headerShown:true
+                                  headerShown:false
+
+                              }}/>
+                <Stack.Screen name="Yellow" component={Yellow}
+                              options={{
+                                  title: 'Yellow',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:false
 
                               }}/>
 

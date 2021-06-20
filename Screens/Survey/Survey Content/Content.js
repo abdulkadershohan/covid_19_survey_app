@@ -189,7 +189,7 @@ export default class Quiz extends Component {
             clickedAnswer: 0
         });
         const {score,buttonName } = this.state;
-        if(score===3 || step===18 ){
+        if(score===4 || step===18 ){
 
             this.setState({
                 buttonName: 'Finish',

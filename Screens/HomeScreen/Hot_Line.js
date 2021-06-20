@@ -9,7 +9,7 @@ export default class Hot_Line extends Component {
             <View>
                 <Content>
                         <List style={MyStyle.colorDanger}>
-                            <ListItem style={{justifyContent:'center'}}>
+                            {/* <ListItem style={{justifyContent:'center'}}>
                                 <Icon style={{
                                     backgroundColor:'transparent',
                                     fontSize:25,
@@ -24,7 +24,7 @@ export default class Hot_Line extends Component {
 
 
                                 }}>HOT LINE NUMBERS</Text>
-                            </ListItem>
+                            </ListItem>*/}
                         </List>
 
 

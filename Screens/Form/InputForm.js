@@ -74,14 +74,14 @@ class InputForm extends Component {
                 score:''
 
             })
-            if(this.state.score<=1){
-                window.location.href=('/result-green')
+            if(this.state.score>=3){
+                this.props.name.navigation.navigate("Danger")
             }
             else if(this.state.score===2){
-                window.location.href=('/result-avg')
+                this.props.name.navigation.navigate("Yellow")
             }
-            else if(this.state.score>2){
-                window.location.href=('/result-danger')
+            else if(this.state.score<2){
+                this.props.name.navigation.navigate("Green")
             }
 
 

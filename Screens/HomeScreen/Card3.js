@@ -30,7 +30,7 @@ class Card3 extends Component {
 
 
                                 }}>
-                                    World live stats will provide information about coronavirus real time update. You can see the active cases, deaths and recover worldwide. By searching you can know details about a particular countries. You can search also by scrolling.
+                                    World live stats will provide information about coronavirus real time update. You can see the active cases, deaths and recover worldwide.
                                 </Text>
                             </Body>
                         </CardItem>

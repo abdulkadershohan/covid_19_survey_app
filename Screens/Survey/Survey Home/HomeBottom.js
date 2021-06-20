@@ -16,7 +16,7 @@ componentDidMount() {
             })
             .catch((error)=>{
             console.log("Api call error")
-            alert(error.message);
+            //alert(error.message);
         });
 
 
@@ -24,7 +24,7 @@ componentDidMount() {
     countDanger(){
         let countDanger = 0;
         this.state.users
-            .filter((score) => score.score !=0)
+            .filter((score) => score.score >=3)
             .map(function (score, i) {
                 countDanger += 1;
             });
@@ -34,7 +34,7 @@ componentDidMount() {
     countYellow() {
         let countYellow = 0;
         this.state.users
-            .filter((score) => score.score !=0)
+            .filter((score) => score.score ==2 )
             .map(function (score, i) {
                 countYellow += 1;
             });
@@ -43,7 +43,7 @@ componentDidMount() {
     countGreen() {
         let countGreen = 0;
         this.state.users
-            .filter((score) => score.score <= 1)
+            .filter((score) => score.score < 2)
             .map(function (score, i) {
                 countGreen += 1;
             });

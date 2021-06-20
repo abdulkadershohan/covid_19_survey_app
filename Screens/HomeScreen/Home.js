@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {SafeAreaView, ScrollView,} from 'react-native';
-import { Container, Header, Content, FooterTab, Button, Icon, Text, Badge } from 'native-base';
+import {BackHandler} from 'react-native'
+import {Container, Header, Content, FooterTab, Button, Icon, Text, Badge, Left, Body, Title, Right} from 'native-base';
 import Hot_Line from './Hot_Line';
 import Card1 from './Card';
 import Card2 from './Card2';
@@ -14,8 +14,25 @@ class Home extends Component {
     render() {
         return (
             <Container>
-                <Header centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-                        rightComponent={{ icon: 'home', color: '#fff' }} />
+                <Header>
+                    <Left>
+                        <Button transparent>
+                            <Icon name='home' />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Text style={{
+                            color:"#FFFFFF",
+                            fontWeight:'bold'
+                        }}>COVID-19 SURVEY APP</Text>
+                    </Body>
+                    <Right>
+                        <Button transparent onPress ={()=>BackHandler.exitApp()}>
+                            <Icon name='power' />
+                        </Button>
+                    </Right>
+
+                </Header>
                 <Content>
                     <Hot_Line/>
                     <Card1 name={this.props}/>
