@@ -54,7 +54,7 @@ class InputForm extends Component {
                 score:this.state.score
             }
 
-            axios.post("http://192.168.0.100/COVIT-19-SURVEY-APP/insert.php",obj)
+            axios.post("http://192.168.0.101/COVID-19-SURVEY-APP/insert.php",obj)
                 /* .then(res=>console.log(res.data))
                  */
                 .then(response=>{
@@ -74,6 +74,17 @@ class InputForm extends Component {
                 score:''
 
             })
+            if(this.state.score<=1){
+                window.location.href=('/result-green')
+            }
+            else if(this.state.score===2){
+                window.location.href=('/result-avg')
+            }
+            else if(this.state.score>2){
+                window.location.href=('/result-danger')
+            }
+
+
         }
 
 
@@ -99,6 +110,7 @@ class InputForm extends Component {
                                 <Label>Name</Label>
                                 <Input keyboardType="text"
                                        key="Name"
+                                       placeholder="Type your name here"
                                        value={this.state.name}
                                        onChangeText={(text)=>this.setState({name:text})}
                                 />
@@ -165,7 +177,7 @@ class InputForm extends Component {
                             }}>
                                 <Button full rounded
                                         onPress={this.ButtononPressHandel}
-                                ><Text>Continue</Text></Button>
+                                ><Text style={{color:'#FFFFFF'}}>Continue</Text></Button>
                             </TouchableOpacity>
 
                         </Form>
