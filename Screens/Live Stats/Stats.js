@@ -137,15 +137,17 @@ function Stats(props) {
                             color:'green'
                         }}>Last Updated : {lastUpdated}</Text>
 
+
                         {/*
-                         <View>
+                            <View>
                             {countries}
                         </View>
                         */}
 
 
+
                     </Content>
-                    <Footer1 name={props}/>
+                    <Footer1 name={props} stats_active={true} />
                 </Container>
 
         );

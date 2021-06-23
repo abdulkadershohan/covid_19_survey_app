@@ -130,7 +130,7 @@ export default class Trips extends Component {
 
 
                             </Content>
-                <Footer1 name={this.props}/>
+                <Footer1 name={this.props} trips_active={true}/>
             </Container>
 
 

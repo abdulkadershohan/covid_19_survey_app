@@ -248,7 +248,7 @@ export default class Quiz extends Component {
                         )
                     }
                 </Content>
-                <Footer1 name={this.props}/>
+                <Footer1 name={this.props} survey_active={true}/>
 
             </Container>
         );

@@ -39,7 +39,7 @@ class Home extends Component {
                     <Card2 name={this.props}/>
                     <Card3 name={this.props}/>
                 </Content>
-                <Footer1 name={this.props}/>
+                <Footer1 name={this.props}   home_active={true}/>
 
             </Container>
 

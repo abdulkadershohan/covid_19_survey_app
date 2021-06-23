@@ -16,7 +16,7 @@ class SurveyHome extends Component {
                     <SurveyHomeTop name={this.props}/>
                     <SurveyHomeBottom/>
                 </Content>
-                <Footer1 name={this.props}/>
+                <Footer1 name={this.props} survey_active={true}/>
             </Container>
 
         );
