@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SafeAreaView, ScrollView,View,Text,StyleSheet} from 'react-native';
+import {SafeAreaView, ScrollView,View,Text,StyleSheet,KeyboardAvoidingView} from 'react-native';
 import { Container, Header, Content, FooterTab, Button, Icon, Badge } from 'native-base';
 
 import Answer from '../Answer/Answer';
@@ -208,49 +208,51 @@ export default class Quiz extends Component {
     render(){
         let { quiestions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
           return(
-            <Container>
-                <Content>
-                    {step <= Object.keys(quiestions).length ?
-                        (<>
-                            <Question
-                                question={quiestions[step]}
-                            />
-                            <Answer
-                                answer={answers[step]}
-                                step={step}
-                                checkAnswer={this.checkAnswer}
-                                correctAnswer={correctAnswer}
-                                clickedAnswer={clickedAnswer}
-                            />
-                            <Button success style={{
-                                width:80,
-                                marginLeft:50,
-                                padding:20,
 
-                            }}
-                                disabled={
-                                    clickedAnswer && Object.keys(quiestions).length >= step ? false : true
-                                }
-                                onPress={() => this.nextStep(step)}><Text style={SurveyStyle.Button}>{this.state.buttonName}</Text></Button>
-                        </>) : (
-                            <View >
-                                <Text style={{
-                                    color:'green',
-                                    textAlign:'center',
-                                    fontSize:20,
-                                    fontWeight:'bold',
-                                    paddingTop:10
-                                }}>You have completed the Survey!</Text>
-                                <InputForm sendScore={this.state.score} name={this.props}/>
-                            </View>
+                  <Container>
+                      <Content>
+                          {step <= Object.keys(quiestions).length ?
+                              (<>
+                                  <Question
+                                      question={quiestions[step]}
+                                  />
+                                  <Answer
+                                      answer={answers[step]}
+                                      step={step}
+                                      checkAnswer={this.checkAnswer}
+                                      correctAnswer={correctAnswer}
+                                      clickedAnswer={clickedAnswer}
+                                  />
+                                  <Button success style={{
+                                      width:80,
+                                      marginLeft:50,
+                                      padding:20,
+
+                                  }}
+                                          disabled={
+                                              clickedAnswer && Object.keys(quiestions).length >= step ? false : true
+                                          }
+                                          onPress={() => this.nextStep(step)}><Text style={SurveyStyle.Button}>{this.state.buttonName}</Text></Button>
+                              </>) : (
+                                  <View >
+                                      <Text style={{
+                                          color:'green',
+                                          textAlign:'center',
+                                          fontSize:20,
+                                          fontWeight:'bold',
+                                          paddingTop:10
+                                      }}>You have completed the Survey!</Text>
+                                      <InputForm sendScore={this.state.score} name={this.props}/>
+                                  </View>
 
 
-                        )
-                    }
-                </Content>
-                <Footer1 name={this.props} survey_active={true}/>
+                              )
+                          }
+                      </Content>
+                      {/* <Footer1 name={this.props} survey_active={true} />*/}
 
-            </Container>
+                  </Container>
+
         );
     }
 }

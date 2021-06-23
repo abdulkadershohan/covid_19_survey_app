@@ -12,6 +12,7 @@ import {
     Icon,
     Left,
     Body,
+    Input,
     Right,
     Label, Item,
 } from 'native-base';
@@ -24,6 +25,7 @@ function Stats(props) {
         const [latest,setLatest]=useState("");
         const [results,setResult]=useState([])
         const [searchCountry,setSearchCountry]=useState("")
+        const [defaultCountry,setDefaultCountry]=useState("")
     useEffect(()=>{
         axios
             .all([
@@ -43,7 +45,10 @@ function Stats(props) {
     const date=new Date(parseInt(latest.updated));
     const lastUpdated =date.toString();
     const filterCountry=results.filter(item=>{
-        return searchCountry !==""?item.country.includes(searchCountry):item;
+       // return item.country==="Bangladesh"
+
+            return searchCountry !==""?item.country.includes(searchCountry):item
+
     })
     const countries=filterCountry.map((data, i)=>{
 
@@ -67,31 +72,31 @@ function Stats(props) {
 
 
                         <CardItem>
-                               <Left>
-                                   <Body  style={{
-                                       alignItems:'center',
-                                       paddingBottom:10,
-                                       marginTop:-15,
+                            <Left>
+                                <Body  style={{
+                                    alignItems:'center',
+                                    paddingBottom:10,
+                                    marginTop:-15,
 
-                                   }}>
-                                       <Text style={{color: "#161616"}}>Active : {data.cases}</Text>
-                                       <Text style={{color: "red"}}>Deaths : {data.deaths}</Text>
-                                       <Text style={{color: "green"}}>Recovered : {data.recovered}</Text>
-                                   </Body>
-                               </Left>
-                               <Right>
-                                  <Body  style={{
-                                      alignItems:'center',
-                                      paddingBottom:10,
-                                      paddingTop:5
+                                }}>
+                                    <Text style={{color: "#161616"}}>Active : {data.cases}</Text>
+                                    <Text style={{color: "red"}}>Deaths : {data.deaths}</Text>
+                                    <Text style={{color: "green"}}>Recovered : {data.recovered}</Text>
+                                </Body>
+                            </Left>
+                            <Right>
+                                <Body  style={{
+                                    alignItems:'center',
+                                    paddingBottom:10,
+                                    paddingTop:5
 
-                                  }}>
-                                      <Text style={{color: "#161616"}}>Today's Cases : {data.todayCases}</Text>
-                                      <Text style={{color: "red"}}>Today's deaths : {data.todaysDeaths}</Text>
-                                      <Text style={{color: "green"}}>Active : {data.active}</Text>
-                                      <Text style={{color: "red"}}>Critical : {data.critical}</Text>
-                                  </Body>
-                               </Right>
+                                }}>
+                                    <Text style={{color: "#161616"}}>Today's Cases : {data.todayCases}</Text>
+                                    <Text style={{color: "red"}}>Today's deaths : {data.todaysDeaths}</Text>
+                                    <Text style={{color: "green"}}>Active : {data.active}</Text>
+                                    <Text style={{color: "red"}}>Critical : {data.critical}</Text>
+                                </Body>
+                            </Right>
 
 
                         </CardItem>
@@ -113,7 +118,6 @@ function Stats(props) {
                                 </Text>
                                 <Text style={styles.score}>{latest.cases}</Text>
 
-
                             </View>
                             <View style={styles.Deaths}>
                                 <Text style={styles.text}>
@@ -134,19 +138,29 @@ function Stats(props) {
                         </View>
                         <Text style={{
                             textAlign:'center',
-                            color:'green'
+                            color:'green',
+                            margin:20,
+                            fontWeight:'bold'
                         }}>Last Updated : {lastUpdated}</Text>
+                        <Header searchBar rounded>
+                            <Item>
+                                <Icon name="ios-search" />
+                                <Input placeholder="Search Country"   onChangeText={(text)=>setSearchCountry(text)}/>
+                              
+                                <Icon name="earth" />
 
+                            </Item>
 
-                        {/*
-                            <View>
+                        </Header>
+                        {/* <View>
                             {countries}
-                        </View>
-                        */}
+                        </View>*/}
+
 
 
 
                     </Content>
+
                     <Footer1 name={props} stats_active={true} />
                 </Container>
 
