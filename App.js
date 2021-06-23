@@ -16,11 +16,7 @@ import Yellow from "./Screens/Survey/Result Screen/yellow";
 const Stack = createStackNavigator();
 
 function App() {
-
-    return (
-
-
-    <NavigationContainer>
+    {/*<NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name="Home" component={Home}
                     options={{
@@ -137,14 +133,20 @@ function App() {
                                   headerShown:false
 
                               }}/>
-
-
-
-
-
-
             </Stack.Navigator>
-        </NavigationContainer>
+        </NavigationContainer>*/}
+    {/*    <SafeAreaView>
+        <ScrollView>
+            <Green/>
+        </ScrollView>
+    </SafeAreaView>*/}
+    return (
+
+        <SafeAreaView>
+        <ScrollView>
+           <Green/>
+        </ScrollView>
+    </SafeAreaView>
 
 
 
