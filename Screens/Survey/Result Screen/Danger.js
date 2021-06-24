@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {SafeAreaView, ScrollView, Text, TextInput, Picker, TouchableOpacity, View, Linking} from 'react-native';
+import {SafeAreaView, ScrollView, Text, TouchableOpacity, View, Linking, Image} from 'react-native';
 import {Body, Button, Card, CardItem, Content, Header, Icon, Left, Right, Title} from "native-base";
 class Danger extends Component {
     render() {
         return (
             <SafeAreaView>
                 <ScrollView>
-                    <View>
+                    <View >
                         <Header>
                             <Left>
                                 <Button transparent>
@@ -14,11 +14,11 @@ class Danger extends Component {
                                 </Button>
                             </Left>
                             <Body>
-                                <Title>Green Zone</Title>
+                                <Title>Red Zone</Title>
                             </Body>
                             <Right />
                         </Header>
-                        <Content padder>
+                        <Content padder >
                             <Card>
                                 <CardItem header bordered>
                                     <Text style={{
@@ -29,43 +29,44 @@ class Danger extends Component {
                                 </CardItem>
                                 <CardItem bordered>
                                     <Body>
+                                        <Image source={require('../../../images/red.png')} style={{height: 350, width: '100%', flex: 1}}/>
                                         <Text style={{
-                                            color:'#6200EE',
+                                            color:'red',
                                             fontSize:20,
 
                                         }}>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, beatae distinctio fuga ipsam iste modi mollitia nisi obcaecati placeat sint, sit temporibus velit veniam. Accusamus ad at, commodi corporis iusto laboriosam mollitia nobis omnis, quaerat quas quasi sequi ut voluptates! Architecto at esse fugiat laborum rem sapiente velit veniam voluptas!
-
+                                            According to our observation your test result is red. This application was created for testing purposes only. Experimental observers should not be given health advice from this application. The software will keep the information you provide confidential. Thank you
                                         </Text>
+
                                     </Body>
                                 </CardItem>
-                                <CardItem footer bordered >
-                                    <Left>
-                                        <Button rounded  primary iconRight onPress={() => {
-                                            Linking.openURL('http://corona.gov.bd')
-                                        }}
-                                        ><Text style={{color:'#FFFFFF',fontWeight:'bold',padding:5}}> Corona Info  </Text></Button>
-                                    </Left>
-                                    <Body>
-                                        <Button rounded  primary iconRight onPress={() => {
-                                            Linking.openURL('https://www.worldometers.info/coronavirus/')
-                                        }}
-                                        ><Text style={{color:'#FFFFFF',fontWeight:'bold',padding:5}}> worldometers </Text></Button>
-                                    </Body>
-                                    <Right>
-                                        <Button rounded  primary iconRight onPress={() => {
-                                            Linking.openURL('https://www.who.int/')
-                                        }}
-                                        ><Text style={{color:'#FFFFFF',fontWeight:'bold',padding:5}}> WHO </Text></Button>
-                                    </Right>
+
+                                <TouchableOpacity>
+                                    <CardItem footer bordered >
+                                        <Left>
+                                            <Button   transparent iconRight onPress={() => {
+                                                Linking.openURL('http://corona.gov.bd')
+                                            }}
+                                            ><Text style={{color:'red',fontWeight:'bold',padding:5,textTransform:"uppercase"}}>Corona Info</Text></Button>
+                                        </Left>
+                                        <Body>
+                                            <Button   transparent  iconRight onPress={() => {
+                                                Linking.openURL('https://www.worldometers.info/coronavirus/')
+                                            }}
+                                            ><Text style={{color:'red',fontWeight:'bold',textTransform:"uppercase"}}>worldometer</Text></Button>
+                                        </Body>
+                                        <Right>
+                                            <Button   transparent iconRight onPress={() => {
+                                                Linking.openURL('https://www.who.int/')
+                                            }}
+                                            ><Text style={{color:'red',fontWeight:'bold',padding:5}}>WHO </Text></Button>
+                                        </Right>
 
 
-                                </CardItem>
-
-
+                                    </CardItem>
+                                </TouchableOpacity>
                             </Card>
                         </Content>
-
                     </View>
 
                 </ScrollView>

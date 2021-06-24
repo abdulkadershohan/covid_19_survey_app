@@ -135,22 +135,9 @@ function App() {
                               }}/>
             </Stack.Navigator>
         </NavigationContainer>*/}
-    {/*    <SafeAreaView>
-        <ScrollView>
-            <Green/>
-        </ScrollView>
-    </SafeAreaView>*/}
+
     return (
-
-        <SafeAreaView>
-        <ScrollView>
-           <Green/>
-        </ScrollView>
-    </SafeAreaView>
-
-
-
-
+            <Home/>
     );
 }
 export default App;
