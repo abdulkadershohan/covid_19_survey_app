@@ -1,23 +1,25 @@
 import React, {Component} from 'react';
 import {Image, Linking, SafeAreaView, ScrollView, Text, TouchableOpacity, View} from 'react-native';
-import {Body, Button, Card, CardItem, Content, Header, Icon, Left, Right, Title} from "native-base";
+import {Body, Button, Card, CardItem, Container, Content, Header, Icon, Left, Right, Title} from "native-base";
+import Result_Trips from "../../Helth-Trips/Result_Trips";
 class Yellow extends Component {
     render() {
         return (
-            <SafeAreaView>
-                <ScrollView>
-                    <View >
-                        <Header>
-                            <Left>
-                                <Button transparent>
-                                    <Icon name='home' />
-                                </Button>
-                            </Left>
-                            <Body>
-                                <Title >Yellow Zone</Title>
-                            </Body>
-                            <Right />
-                        </Header>
+            <Container>
+                <Header>
+                    <Left>
+                        <Button transparent>
+                            <Icon name='home' />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Title >Yellow Zone</Title>
+                    </Body>
+                    <Right />
+                </Header>
+                <Content>
+                    <View  style={{backgroundColor:'#FFFFFF'}} >
+
                         <Content padder >
                             <Card>
                                 <CardItem header bordered  >
@@ -32,7 +34,7 @@ class Yellow extends Component {
                                         <Image source={require('../../../images/yellow.jpg')} style={{height: 350, width: '100%', flex: 1}}/>
                                         <Text style={{
                                             color:'#161616',
-                                            fontSize:20,
+                                            textAlign: 'justify',
 
                                         }}>
                                             According to our observation your test result is yellow. This application was created for testing purposes only. Experimental observers should not be given health advice from this application. The software will keep the information you provide confidential. Thank you
@@ -69,10 +71,11 @@ class Yellow extends Component {
                                 </TouchableOpacity>
                             </Card>
                         </Content>
+                        <Result_Trips/>
                     </View>
 
-                </ScrollView>
-            </SafeAreaView>
+                </Content>
+            </Container>
         );
     }
 }

@@ -13,6 +13,7 @@ import InputForm from './Screens/Form/InputForm';
 import Danger from './Screens/Survey/Result Screen/Danger';
 import Green from "./Screens/Survey/Result Screen/Green";
 import Yellow from "./Screens/Survey/Result Screen/yellow";
+import Result_Trips from "./Screens/Helth-Trips/Result_Trips";
 const Stack = createStackNavigator();
 
 function App() {
@@ -137,7 +138,7 @@ function App() {
         </NavigationContainer>*/}
 
     return (
-            <Home/>
+       <Yellow/>
     );
 }
 export default App;

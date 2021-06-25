@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
     Image,
-    ImageBackground,
     Linking,
     SafeAreaView,
     ScrollView,
@@ -24,23 +23,25 @@ import {
     CardItem,
     ListItem, Thumbnail, List
 } from 'native-base';
+import Result_Trips from "../../Helth-Trips/Result_Trips";
 class Green extends Component {
        render() {
         return (
-            <SafeAreaView>
-                <ScrollView>
-                    <View >
-                        <Header>
-                            <Left>
-                                <Button transparent>
-                                    <Icon name='home' />
-                                </Button>
-                            </Left>
-                            <Body>
-                                <Title>Green Zone</Title>
-                            </Body>
-                            <Right />
-                        </Header>
+            <Container>
+                <Header>
+                    <Left>
+                        <Button transparent>
+                            <Icon name='home' />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Title>Green Zone</Title>
+                    </Body>
+                    <Right />
+                </Header>
+                <Content>
+                    <View style={{backgroundColor:'#FFFFFF'}} >
+
                         <Content padder >
                             <Card>
                                 <CardItem header bordered>
@@ -55,7 +56,7 @@ class Green extends Component {
                                         <Image source={require('../../../images/green.jpg')} style={{height: 350, width: '100%', flex: 1}}/>
                                         <Text style={{
                                             color:'green',
-                                            fontSize:20,
+                                            textAlign: 'justify',
 
                                         }}>
                                             According to our observation your test result is green. This application was created for testing purposes only. Experimental observers should not be given health advice from this application. The software will keep the information you provide confidential. Thank you
@@ -90,10 +91,11 @@ class Green extends Component {
 
                             </Card>
                         </Content>
+                        <Result_Trips/>
                     </View>
 
-                </ScrollView>
-            </SafeAreaView>
+                </Content>
+            </Container>
 
 
         );
