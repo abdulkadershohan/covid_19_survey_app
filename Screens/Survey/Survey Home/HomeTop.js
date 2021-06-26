@@ -20,7 +20,8 @@ class SurveyHomeTop extends Component {
                                 <CardItem bordered>
                                     <Body>
                                         <Text style={{
-
+                                            textAlign: 'justify',
+                                            color:'#3700B3'
                                         }}>
                                             Welcome.This tool allows you to assess for yourself whether you are at risk of being infected with the Covid-19 or Novel Corona virus, as well as the level of risk and what to do.
                                             This application was created for testing purposes only.

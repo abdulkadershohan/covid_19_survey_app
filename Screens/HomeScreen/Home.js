@@ -6,6 +6,8 @@ import Card1 from './Card';
 import Card2 from './Card2';
 import Card3 from './Card3';
 import Footer1 from '../../Component/Footer';
+import CardVariantsOfInterest from "./CardVariantsOfInterest";
+import CardVariantsOfConcern from "./CardVariantsOfConcern";
 
 class Home extends Component {
     constructor(props) {
@@ -23,7 +25,7 @@ class Home extends Component {
                     <Body>
                         <Text style={{
                             color:"#FFFFFF",
-                            fontWeight:'bold'
+                            fontWeight:'bold',
                         }}>COVID-19 SURVEY APP</Text>
                     </Body>
                     <Right>
@@ -38,6 +40,8 @@ class Home extends Component {
                     <Card1 name={this.props}/>
                     <Card2 name={this.props}/>
                     <Card3 name={this.props}/>
+                    <CardVariantsOfConcern name={this.props}/>
+                    <CardVariantsOfInterest name={this.props}/>
                 </Content>
                 <Footer1 name={this.props}   home_active={true}/>
 

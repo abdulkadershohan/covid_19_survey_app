@@ -16,7 +16,7 @@ class Card3 extends Component {
                             <Left>
                                 <Thumbnail source={require('../../images/WorldMap.jpg')} />
                                 <Body>
-                                    <Text>WORLD LIVE STATES</Text>
+                                    <Text style={{fontWeight:'bold'}}>WORLD LIVE STATES</Text>
                                     <Text note>April 28, 2020</Text>
                                 </Body>
                             </Left>
@@ -26,11 +26,12 @@ class Card3 extends Component {
                                 <Image source={require('../../images/WorldMap.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
                                 <Text style={{
                                     paddingTop:10,
-                                    textAlign:'justify',
+                                    textAlign: 'justify',
+
 
 
                                 }}>
-                                    World live stats will provide information about coronavirus real time update. You can see the active cases, deaths and recover worldwide.
+                                    World live stats will provides information about coronavirus real time update. You can see the active cases, deaths and recover worldwide. By searching you can know details about a particular countries. You can search also by scrolling.
                                 </Text>
                             </Body>
                         </CardItem>

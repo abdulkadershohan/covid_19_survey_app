@@ -18,7 +18,7 @@ class Card1 extends Component {
                                     <Left>
                                         <Thumbnail source={require('../../images/HandWash.jpg')} />
                                         <Body>
-                                            <Text >HEALTH TRIPS</Text>
+                                            <Text style={{fontWeight:'bold'}}>HEALTH TRIPS</Text>
                                             <Text note>April 15, 2020</Text>
                                         </Body>
                                     </Left>
@@ -28,7 +28,7 @@ class Card1 extends Component {
                                         <Image source={require('../../images/HandWash.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
                                         <Text style={{
                                             paddingTop:10,
-
+                                            textAlign: 'justify',
                                         }}>
                                             Protect yourself and others from covid-19. Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. Maintain at least 1 meter (3 feet) distance between yourself and others.
                                         </Text>

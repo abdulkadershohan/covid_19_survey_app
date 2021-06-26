@@ -13,7 +13,10 @@ import InputForm from './Screens/Form/InputForm';
 import Danger from './Screens/Survey/Result Screen/Danger';
 import Green from "./Screens/Survey/Result Screen/Green";
 import Yellow from "./Screens/Survey/Result Screen/yellow";
-import Result_Trips from "./Screens/Helth-Trips/Result_Trips";
+import VariantsOfConcern from "./Screens/Variants/Variants of Concern/VariantsOfConcern";
+import VariantsOfInterest from "./Screens/Variants/Variants of Interest/VariantsOfInterest";
+import BeforeSurvey from "./Screens/Black Fungus/beforeSurvey";
+import QuizBlackFungus from "./Screens/Black Fungus/Survey Content/Content";
 const Stack = createStackNavigator();
 
 function App() {
@@ -134,11 +137,41 @@ function App() {
                                   headerShown:false
 
                               }}/>
+
+                <Stack.Screen name="VariantsOfConcern" component={VariantsOfConcern}
+                              options={{
+                                  title: 'Home',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:false
+
+                              }}/>
+
+                <Stack.Screen name="VariantsOfInterest" component={VariantsOfInterest}
+                              options={{
+                                  title: 'Home',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:false
+
+                              }}/>
             </Stack.Navigator>
         </NavigationContainer>*/}
 
     return (
-       <Yellow/>
+       <QuizBlackFungus/>
     );
 }
 export default App;

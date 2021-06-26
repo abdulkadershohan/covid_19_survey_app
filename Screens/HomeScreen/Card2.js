@@ -17,7 +17,7 @@ class Card2 extends Component {
                             <Left>
                                 <Thumbnail source={require('../../images/survey.jpg')} />
                                 <Body>
-                                    <Text>DIAGNOSE YOUR CHANCES OF GETTING INFECTED</Text>
+                                    <Text style={{fontWeight:'bold'}}>DIAGNOSE YOUR CHANCES OF GETTING INFECTED</Text>
                                     <Text note>April 28, 2020</Text>
                                 </Body>
                             </Left>
@@ -27,7 +27,7 @@ class Card2 extends Component {
                                 <Image source={require('../../images/survey.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
                                 <Text style={{
                                     paddingTop:10,
-                                    textAlign:'justify',
+                                    textAlign: 'justify',
 
 
                                 }}>

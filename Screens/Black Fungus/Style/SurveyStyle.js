@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
     questions:{
         margin: 15 ,
-        fontSize: 20,
+        fontSize: 25,
     },
     options1:{
         width:"80%",
