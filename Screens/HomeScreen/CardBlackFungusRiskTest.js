@@ -3,34 +3,34 @@ import { Container, Content, Card, CardItem, Thumbnail, Button, Left, Body,Text 
 import {Image,View} from 'react-native'
 import Trips from '../Helth-Trips/Trips';
 import {SafeAreaView, ScrollView} from 'react-native';
-class Card1 extends Component {
+class CardBlackFungusRiskTest extends Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
                     <Container style={{
-                        marginTop:50
+                        marginTop:-250
                     }}>
                         <Content>
                             <Card>
                                 <CardItem>
                                     <Left>
-                                        <Thumbnail source={require('../../images/HandWash.jpg')} />
+                                        <Thumbnail source={require('../../images/logo_covid.jpg')} />
                                         <Body>
-                                            <Text style={{fontWeight:'bold'}}>HEALTH TRIPS</Text>
-                                            <Text note>April 15, 2020</Text>
+                                            <Text style={{fontWeight:'bold'}}>BLACK FUNGUS RISK TEST</Text>
+                                            <Text note>June 20, 2021</Text>
                                         </Body>
                                     </Left>
                                 </CardItem>
                                 <CardItem>
                                     <Body>
-                                        <Image source={require('../../images/HandWash.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
+                                        <Image source={require('../../images/Black_Fungus_img.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
                                         <Text style={{
                                             paddingTop:10,
                                             textAlign: 'justify',
                                         }}>
-                                            Protect yourself and others from covid-19. Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. Maintain at least 1 meter (3 feet) distance between yourself and others.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur doloribus eaque eveniet, illo laboriosam numquam reiciendis sed similique voluptatum!
                                         </Text>
                                     </Body>
                                 </CardItem>
@@ -38,7 +38,7 @@ class Card1 extends Component {
                                     <Left>
                                         <Button transparent textStyle={{color: '#87838B'}}>
 
-                                            <Text  onPress={() => this.props.name.navigation.navigate("COVID-19 HEALTH TRIPS")}>
+                                            <Text  onPress={() => this.props.name.navigation.navigate("BeforeBlackFungusTest")}>
                                                 Learn More
                                             </Text>
                                         </Button>
@@ -55,4 +55,4 @@ class Card1 extends Component {
     }
 }
 
-export default Card1;
+export default CardBlackFungusRiskTest;

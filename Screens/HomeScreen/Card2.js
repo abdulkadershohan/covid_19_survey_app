@@ -8,7 +8,7 @@ class Card2 extends Component {
     render() {
         return (
             <Container style={{
-                marginTop:-300
+                marginTop:-250
             }}>
 
                 <Content>

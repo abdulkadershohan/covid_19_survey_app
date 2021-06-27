@@ -17,10 +17,15 @@ import VariantsOfConcern from "./Screens/Variants/Variants of Concern/VariantsOf
 import VariantsOfInterest from "./Screens/Variants/Variants of Interest/VariantsOfInterest";
 import BeforeSurvey from "./Screens/Black Fungus/beforeSurvey";
 import QuizBlackFungus from "./Screens/Black Fungus/Survey Content/Content";
+import CardBlackFungusRiskTest from "./Screens/HomeScreen/CardBlackFungusRiskTest";
+import BeforeBlackFungusTest from "./Screens/Black Fungus/beforeSurvey";
 const Stack = createStackNavigator();
 
 function App() {
-    {/*<NavigationContainer>
+
+
+    return (
+        <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name="Home" component={Home}
                     options={{
@@ -167,11 +172,24 @@ function App() {
                                   headerShown:false
 
                               }}/>
-            </Stack.Navigator>
-        </NavigationContainer>*/}
 
-    return (
-       <QuizBlackFungus/>
+                <Stack.Screen name="BeforeBlackFungusTest" component={BeforeBlackFungusTest}
+                              options={{
+                                  title: 'Home',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:false
+
+                              }}/>
+            </Stack.Navigator>
+        </NavigationContainer>
+
     );
 }
 export default App;

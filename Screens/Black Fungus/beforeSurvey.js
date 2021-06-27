@@ -3,7 +3,7 @@ import {Linking, SafeAreaView, ScrollView} from 'react-native';
 import {Container, Header, Content, Card, CardItem, Text, Body, Button, Icon} from 'native-base';
 
 import Footer1 from '../../Component/Footer';
-class BeforeSurvey extends Component {
+class BeforeBlackFungusTest extends Component {
     constructor(props) {
         super(props);
     }
@@ -47,4 +47,4 @@ class BeforeSurvey extends Component {
 }
 
 
-export default BeforeSurvey;
+export default BeforeBlackFungusTest;

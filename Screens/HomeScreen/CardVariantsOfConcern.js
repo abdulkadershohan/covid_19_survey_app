@@ -8,7 +8,7 @@ class CardVariantsOfConcern extends Component {
     render() {
         return (
             <Container style={{
-                marginTop:-293
+                marginTop:-250
             }}>
                 <Content>
                     <Card>

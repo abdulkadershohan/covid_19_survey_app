@@ -9,7 +9,7 @@ class CardVariantsOfInterest extends Component {
     render() {
         return (
             <Container style={{
-                marginTop:-25,
+                marginTop:-10,
                 marginBottom:-90
             }}>
                 <Content>

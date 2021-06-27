@@ -8,6 +8,7 @@ import Card3 from './Card3';
 import Footer1 from '../../Component/Footer';
 import CardVariantsOfInterest from "./CardVariantsOfInterest";
 import CardVariantsOfConcern from "./CardVariantsOfConcern";
+import CardBlackFungusRiskTest from "./CardBlackFungusRiskTest";
 
 class Home extends Component {
     constructor(props) {
@@ -39,6 +40,7 @@ class Home extends Component {
                     <Hot_Line/>
                     <Card1 name={this.props}/>
                     <Card2 name={this.props}/>
+                    <CardBlackFungusRiskTest name={this.props.name}/>
                     <Card3 name={this.props}/>
                     <CardVariantsOfConcern name={this.props}/>
                     <CardVariantsOfInterest name={this.props}/>
