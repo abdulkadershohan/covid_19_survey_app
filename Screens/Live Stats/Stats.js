@@ -53,9 +53,9 @@ function Stats(props) {
     const countries=filterCountry.map((data, i)=>{
 
         return (
-            <View kye={i}>
+            <View>
                 <Content>
-                    <Card>
+                    <Card kye={i}>
                         <CardItem>
                             <Left>
                                 <Thumbnail source={{uri: data.countryInfo.flag}} />
@@ -152,9 +152,9 @@ function Stats(props) {
                             </Item>
 
                         </Header>
-                        {/* <View>
+                     <View>
                             {countries}
-                        </View>*/}
+                        </View>
 
 
 

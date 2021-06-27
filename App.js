@@ -184,7 +184,22 @@ function App() {
                                       fontWeight: 'bold',
                                   },
 
-                                  headerShown:false
+                                  headerShown:true
+
+                              }}/>
+
+                <Stack.Screen name="QuizBlackFungus" component={QuizBlackFungus}
+                              options={{
+                                  title: 'Black Fungus',
+                                  headerStyle: {
+                                      backgroundColor:'#6200EE',
+                                  },
+                                  headerTintColor: '#FFFFFF',
+                                  headerTitleStyle: {
+                                      fontWeight: 'bold',
+                                  },
+
+                                  headerShown:true
 
                               }}/>
             </Stack.Navigator>

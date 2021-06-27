@@ -30,7 +30,7 @@ class CardBlackFungusRiskTest extends Component {
                                             paddingTop:10,
                                             textAlign: 'justify',
                                         }}>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur doloribus eaque eveniet, illo laboriosam numquam reiciendis sed similique voluptatum!
+                                            Are you infected? Check yourself whether you infected or not.This procedure is safe but Experimental observers should not be given health advice from this Applications
                                         </Text>
                                     </Body>
                                 </CardItem>

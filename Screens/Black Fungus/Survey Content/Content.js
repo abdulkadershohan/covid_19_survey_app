@@ -5,6 +5,7 @@ import SurveyStyle from '../Style/SurveyStyle';
 import Question from "../Questions/Question";
 import Answer from "../Answer/Answer";
 import InputForm from "../../Form/InputForm";
+import Footer1 from "../../../Component/Footer";
 
 
 
@@ -220,8 +221,8 @@ export default class QuizBlackFungus extends Component {
                             </CardItem>
                         </Card>
                     </Content>
-
                 </Content>
+                <Footer1 name={this.props} />
             </Container>
 
         );

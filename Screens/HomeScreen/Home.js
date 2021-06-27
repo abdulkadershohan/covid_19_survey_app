@@ -40,7 +40,7 @@ class Home extends Component {
                     <Hot_Line/>
                     <Card1 name={this.props}/>
                     <Card2 name={this.props}/>
-                    <CardBlackFungusRiskTest name={this.props.name}/>
+                    <CardBlackFungusRiskTest name={this.props}/>
                     <Card3 name={this.props}/>
                     <CardVariantsOfConcern name={this.props}/>
                     <CardVariantsOfInterest name={this.props}/>
