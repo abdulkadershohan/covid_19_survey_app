@@ -65,7 +65,7 @@ class InputForm extends Component {
                 score:this.state.score
             }
 
-            axios.post("http://192.168.0.101/COVID-19-SURVEY-APP/insert.php",obj)
+            axios.post("http://192.168.0.103/COVID-19-SURVEY-APP/insert.php",obj)
                 /* .then(res=>console.log(res.data))
                  */
                 .then(response=>{

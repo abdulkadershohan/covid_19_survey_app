@@ -44,7 +44,7 @@ class Footer1 extends Component {
                                 onPress={this.onPressHandelTrips}
                         >
                             <Icon type="MaterialIcons" name='beenhere' />
-                            <Text>Trips</Text>
+                            <Text>Tips</Text>
                         </Button>
                         <Button vertical active={this.state.survey_active}
                                 onPress={() => this.props.name.navigation.navigate("Survey")}

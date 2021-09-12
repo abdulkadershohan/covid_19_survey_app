@@ -9,7 +9,7 @@ class SurveyHomeBottom extends Component {
 componentDidMount() {
 
         axios
-            .get("http://192.168.0.101/COVID-19-SURVEY-APP/select.php")
+            .get("http://192.168.0.103/COVID-19-SURVEY-APP/select.php")
             .then(res=>{
                this.setState({users:res.data})
                console.log(res.data.name)
