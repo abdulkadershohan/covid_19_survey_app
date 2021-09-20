@@ -32,12 +32,6 @@ find all option in one place.
 ## LANGUAGE:
 * JAVASCRIPT
 * PHP
-
-
-### To Run the Application Simply Type in your Terminal: `npx react-native start`
-The project will run [http://localhost:3000](http://localhost:3000)
-Open  to view it in the browser.
-
 ## How to Setup and Run on your Desktop:
 
 #### Setting up the development environment: [Click here](https://reactnative.dev/docs/environment-setup)
@@ -66,5 +60,4 @@ Restart XAMPP and start Apache server and MySQL server.
 *** ENJOY ***
 ### Project Screenshot
 ![Screenshot](Screenshot_20210920-201609_COVID-19 SURVEY APP.jpg)
-
 
