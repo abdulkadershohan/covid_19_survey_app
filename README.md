@@ -20,9 +20,6 @@ But these two sites are not easy to use for everyone. So that we create an app t
 easier from these two websites and much easier to understand for all level of people and users easily
 find all option in one place.
 
-
-## Preview The Live Project [Click here](https://covid-19-survey-form-2020.netlify.app/).
-
 ## FRAMEWORKS:
 * React native
 * Native base
@@ -37,32 +34,39 @@ find all option in one place.
 * PHP
 
 
-### To Run the Application Simply Type in your Terminal: `npm start`
+### To Run the Application Simply Type in your Terminal: `npx react-native start`
 The project will run [http://localhost:3000](http://localhost:3000)
 Open  to view it in the browser.
 
-### To Build the Application Simply Type in your Terminal: `npm run build`
+## How to Setup and Run on your Desktop:
 
-## How to Run on your Desktop:
-Required tools:
-* Install Node.js and npm
-* Install the Git CLI
-* Install Visual Studio Code or any other IDE You prefer
-
+#### Setting up the development environment: [Click here](https://reactnative.dev/docs/environment-setup)
+Once you complete the environment setup for react-native.
 Simply Download the source code then extract the file and Open folder in VS Code or any IDE You Used. Install the dependencies in  node_module from package.json by command on your terminal `npm install`
-then run `npm start`
+then run `npx react-native start`
 
 ## How to setup the backend:
 Required tools:
 * XAMPP
 
-copy `COVID-19-SURVEY-FROM` directory from `root\database` and paste it into `C:\xampp\htdocs`.
+copy `COVID-19-SURVEY-APP` directory from `root\database` and paste it into `C:\xampp\htdocs`.
 Open XAMPP and start MySQL server and go admin then create a new database name `mydb` then open `mydb (1)` from `COVID-19-SURVEY-FROM`
 and copy `create table` command and run it. Again copy `INSERT` command and run.
+
+*Last things to do: go to your `commend prompt` type `ipconfig` press `enter` and copy your `IPv4 addresses`. Once you have coped IP addresses you need to go `package.json` file and update the `proxy` only.*
+
+Example: 
+#### [ "proxy": "http://192.168.0.101/COVID-19-SURVEY-APP" ]
+my id addresses is 192.168.10.33
+#### After update IP addresses : [ "proxy": "http://192.168.10.33/COVID-19-SURVEY-APP" ]
+
 ###*Now Your Database is Ready.*
 Restart XAMPP and start Apache server and MySQL server.
 
 *** ENJOY ***
 ### Project Screenshot
-![Screenshot](screencapture.png)
+![Screenshot](s1.png)
+![Screenshot](s2.png)
+![Screenshot](s3.png)
+![Screenshot](s4.png)
 
