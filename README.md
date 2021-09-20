@@ -65,8 +65,6 @@ Restart XAMPP and start Apache server and MySQL server.
 
 *** ENJOY ***
 ### Project Screenshot
-![Screenshot](s1.png)
-![Screenshot](s2.png)
-![Screenshot](s3.png)
-![Screenshot](s4.png)
+![Screenshot](Screenshot_20210920-201609_COVID-19 SURVEY APP.jpg)
+
 
